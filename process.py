@@ -35,6 +35,7 @@ def get_gemini_pro_corrections(resume_text, job_description):
     prompt = f"Analyze the following resume and job description, and provide corrections to improve the resume, your main " \
              f"aim is to make the resume more ATS friendly, assume that there is no issues with the readability of the resume" \
              f"provide improvement strictly based on the content of the resume" \
+             f"The suggestions should be point wise short and in around 100 words." \
              f":\n\nResume:\n{resume_text}\n\nJob Description:\n{job_description}"
 
     response = model.generate_content(prompt)
